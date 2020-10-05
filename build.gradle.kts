@@ -16,6 +16,7 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.github.microutils:kotlin-logging:1.11.5")
+    implementation("com.google.cloud.functions:functions-framework-api:1.0.1")
     invoker("com.google.cloud.functions.invoker:java-function-invoker:1.0.0-alpha-2-rc5")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
@@ -26,7 +27,7 @@ dependencies {
 }
 
 application {
-    mainClassName = "com.codenerve.tweet.AppKt"
+    mainClassName = "com.codenerve.function.AppKt"
 }
 
 task<JavaExec>("runFunction") {
