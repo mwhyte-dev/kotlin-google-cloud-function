@@ -32,5 +32,10 @@ gcloud functions deploy my-test-function \
 ```
 
 ```
-gcloud functions describe tweet-function
+gcloud functions describe my-test-function
+```
+
+###### trigger function
+```
+curl https://<your-region>-<you-project-name>.cloudfunctions.net/my-test-function
 ```
