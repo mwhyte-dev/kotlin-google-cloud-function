@@ -1,24 +1,35 @@
 # kotlin-google-cloud-function
 
 ##### Running the function locally. 
+###### Basic
+```
+./gradlew runFunction 
+```
+
+###### With args
 ```
 ./gradlew runFunction -PrunFunction.target=com.codenerve.function.App -PrunFunction.port=8080
 ```
 
+
 ##### Deploying to GCloud (basic)
+###### Set region
 ```
 gcloud config set functions/region europe-west1
 ```
 
+###### build function
 ```
 ./gradlew buildFunction
-
-gcloud functions deploy tweet-function \
---entry-point=com.codenerve.tweet.App \
---source=build/deploy --runtime=java11 --trigger-http \
---allow-unauthenticated --set-env-vars OK=nice
 ```
-*N.B. gcp functions need fat jars so there was gradle work to be done here. 
+
+###### deploy function
+```
+gcloud functions deploy my-test-function \
+--entry-point=com.codenerve.function.App \
+--source=build/deploy --runtime=java11 --trigger-http \
+--allow-unauthenticated
+```
 
 ```
 gcloud functions describe tweet-function

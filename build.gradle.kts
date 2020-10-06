@@ -35,7 +35,7 @@ task<JavaExec>("runFunction") {
     classpath(invoker)
     inputs.files(configurations.runtimeClasspath, sourceSets["main"].output)
     args(
-        "--target", project.findProperty("runFunction.target") ?: "",
+        "--target", project.findProperty("runFunction.target") ?: "com.codenerve.function.App",
         "--port", project.findProperty("runFunction.port") ?: 8080
     )
     doFirst {
