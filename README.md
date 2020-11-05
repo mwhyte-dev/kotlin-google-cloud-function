@@ -1,5 +1,7 @@
 # kotlin-google-cloud-function
 
+Full blog post here: https://codenerve.com/creating-google-cloud-functions-in-kotlin/index.html
+
 ##### Running the function locally. 
 ###### Basic
 ```
