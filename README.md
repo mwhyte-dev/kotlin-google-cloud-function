@@ -1,6 +1,6 @@
 # kotlin-google-cloud-function
 
-Full blog post here: https://codenerve.com/creating-google-cloud-functions-in-kotlin/index.html
+Full blog post here: https://mwhyte.dev/creating-google-cloud-functions-in-kotlin/index.html
 
 ##### Running the function locally. 
 ###### Basic
@@ -10,7 +10,7 @@ Full blog post here: https://codenerve.com/creating-google-cloud-functions-in-ko
 
 ###### With args
 ```
-./gradlew runFunction -PrunFunction.target=com.codenerve.function.App -PrunFunction.port=8080
+./gradlew runFunction -PrunFunction.target=dev.mwhyte.function.App -PrunFunction.port=8080
 ```
 
 
@@ -28,7 +28,7 @@ gcloud config set functions/region europe-west1
 ###### deploy function
 ```
 gcloud functions deploy my-test-function \
---entry-point=com.codenerve.function.App \
+--entry-point=dev.mwhyte.function.App \
 --source=build/deploy --runtime=java11 --trigger-http \
 --allow-unauthenticated
 ```
@@ -40,4 +40,9 @@ gcloud functions describe my-test-function
 ###### trigger function
 ```
 curl https://<your-region>-<you-project-name>.cloudfunctions.net/my-test-function
+```
+
+###### remove function from gcp 
+```
+gcloud functions delete my-test-function
 ```

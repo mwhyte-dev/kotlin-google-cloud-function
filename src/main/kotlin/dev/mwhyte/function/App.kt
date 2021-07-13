@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.codenerve.function
+package dev.mwhyte.function
 
 import com.google.cloud.functions.HttpFunction
 import com.google.cloud.functions.HttpRequest

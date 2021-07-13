@@ -27,7 +27,7 @@ dependencies {
 }
 
 application {
-    mainClassName = "com.codenerve.function.AppKt"
+    mainClassName = "dev.mwhyte.function.AppKt"
 }
 
 task<JavaExec>("runFunction") {
@@ -35,7 +35,7 @@ task<JavaExec>("runFunction") {
     classpath(invoker)
     inputs.files(configurations.runtimeClasspath, sourceSets["main"].output)
     args(
-        "--target", project.findProperty("runFunction.target") ?: "com.codenerve.function.App",
+        "--target", project.findProperty("runFunction.target") ?: "dev.mwhyte.function.App",
         "--port", project.findProperty("runFunction.port") ?: 8080
     )
     doFirst {
