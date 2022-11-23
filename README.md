@@ -1,6 +1,8 @@
-# kotlin-google-cloud-function
+# kotlin-template-gcloud-function
 
-Full blog post here: https://mwhyte.dev/creating-google-cloud-functions-with-kotlin-c9fd552d6b20
+This is a kotlin template is based on [mwhyte-dev/kotlin-google-cloud-function](https://github.com/mwhyte-dev/kotlin-google-cloud-function) repository.
+
+You can find the author's article [here](https://mwhyte.dev/creating-google-cloud-functions-with-kotlin-c9fd552d6b20).
 
 ##### Running the function locally. 
 ###### Basic
@@ -10,7 +12,7 @@ Full blog post here: https://mwhyte.dev/creating-google-cloud-functions-with-kot
 
 ###### With args
 ```
-./gradlew runFunction -PrunFunction.target=dev.mwhyte.function.App -PrunFunction.port=8080
+./gradlew runFunction -PrunFunction.target=dev.marcocattaneo.function.App -PrunFunction.port=8080
 ```
 
 
@@ -28,7 +30,7 @@ gcloud config set functions/region europe-west1
 ###### deploy function
 ```
 gcloud functions deploy my-test-function \
---entry-point=dev.mwhyte.function.App \
+--entry-point=dev.marcocattaneo.function.App \
 --source=build/deploy --runtime=java11 --trigger-http \
 --allow-unauthenticated
 ```

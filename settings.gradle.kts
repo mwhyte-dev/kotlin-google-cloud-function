@@ -1,1 +1,1 @@
-rootProject.name = "kotlin-google-cloud-function"
+rootProject.name = "kotlin-template-gcloud-function"
