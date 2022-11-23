@@ -2,7 +2,7 @@ import java.lang.invoke.MethodHandles.invoker
 
 val invoker by configurations.creating
 
-val packageName = "dev.marcocattaneo.functions"
+val packageName = "dev.marcocattaneo.function"
 
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.7.21"

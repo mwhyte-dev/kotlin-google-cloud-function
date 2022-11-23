@@ -12,7 +12,7 @@ You can find the author's article [here](https://mwhyte.dev/creating-google-clou
 
 ###### With args
 ```
-./gradlew runFunction -PrunFunction.target=dev.marcocattaneo.function.App -PrunFunction.port=8080
+./gradlew runFunction -PrunFunction.target=dev.marcocattaneo.function.HttpSampleApp -PrunFunction.port=8080
 ```
 
 
@@ -30,7 +30,7 @@ gcloud config set functions/region europe-west1
 ###### deploy function
 ```
 gcloud functions deploy my-test-function \
---entry-point=dev.marcocattaneo.function.App \
+--entry-point=dev.marcocattaneo.function.HttpSampleApp \
 --source=build/deploy --runtime=java11 --trigger-http \
 --allow-unauthenticated
 ```
