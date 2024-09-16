@@ -1,6 +1,6 @@
 # kotlin-google-cloud-function
 
-Full blog post here: https://mwhyte.dev/creating-google-cloud-functions-with-kotlin-c9fd552d6b20
+Full blog post here: https://www.mwhyte.dev/Creating-Google-Cloud-Functions-With-Kotlin-10240732311180088c10d2007899dd2b
 
 ##### Running the function locally. 
 ###### Basic
